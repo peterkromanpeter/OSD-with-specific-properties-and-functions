@@ -16,12 +16,12 @@
 <body>
 
 <script>
-f<script>
 function updateForHash() {
   var hash = window.location.hash.replace(/^#/, '');
   if (hash && /^side/.test(hash)) {
     var hashNumber = hash.replace(/^side/, '');
     var index = parseInt(hashNumber, 10) - 1;
+    console.log('Going to page index', index);
     viewer.goToPage(index);
   }
 }
@@ -43,7 +43,7 @@ function updateForHash() {
   <input type="text" style="-webkit-font-smoothing:antialiased;-webkit-transition:color .2s ease-in-out;-moz-transition:color .2s ease-in-out;-o-transition:color .2s ease-in-out;-ms-transition:color .2s ease-in-out;transition:color .2s ease-in-out;font-family: Lucida Blackletter; text-docoration:none; font-weight:bold; font-size: 34px; text-align:left; text-shadow: 5px 5px 10px #191919;color: #FFFFFF; background-color:#666666; margin-left:10px;border:none";id="my_text-input3" value="Genealogisk forum">
   <br>
   <div class="flex-container">
-<div class="flex-item"><input type="text" style="font-family: arial; font-size: 12px; font-weight:normal; text-align:center; color: #e1e1e1; background-color:#666666; width: 300px; margin-left:0px;border: 1px solid #f6f6f6; ";id="my_text-input3" value="Test bog "></div> 
+<div class="flex-item"><input type="text" style="font-family: arial; font-size: 12px; font-weight:normal; text-align:center; color: #e1e1e1; background-color:#666666; width: 300px; margin-left:0px;border: 1px solid #f6f6f6; ";id="my_text-input3" value="Test bog "></div>
 </div>
   <hr>
   
@@ -74,15 +74,9 @@ function updateForHash() {
 
   <a href="https://genealogiskforum.dk/kontakt/"style="font-family: arial; font-weight: normal; font-size: 12px; color: lightgrey; margin-left:10px; class="w3-bar-item w3-button">Kontakt </a> <br>
 
-<br>	
+<br>
 
-<script>
-function myNavi() {
-    document.getElementById("navigatorDiv").innerHTML;
-    
-}
-</script>
-<body onload="myNavi()">
+<body>
   
 </div>
 
@@ -103,12 +97,12 @@ function myNavi() {
 <!-- OSD start -->
 
 <!-- Navigator for pages -->
-<style> 
+<style>
 .flex-container {
     display: -webkit-flex;
     display: flex;
      -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;   
+    flex-flow: row wrap;
     width: site-width;
     height: 60px;
     background-color: #666666;
@@ -116,7 +110,7 @@ function myNavi() {
     border-bottom: 1px solid #f6f6f6;
     margin-top: 0px;
 
-    justify-content: center; 
+    justify-content: center;
 
 }
 .flex-item {
@@ -135,7 +129,7 @@ function myNavi() {
 
 
             
-</span>    
+</span>
 
 
 
@@ -146,8 +140,8 @@ function myNavi() {
 
 <div class="flex-container">
 
-<!-- First page -->	
-<div class="flex-item"><input type="button" button title="Første side" style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="onefirst"; onclick="firstOne()" value="|<"></div> 
+<!-- First page -->
+<div class="flex-item"><input type="button" button title="Første side" style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="onefirst"; onclick="firstOne()" value="|<"></div>
 
 
  <script>
@@ -159,7 +153,7 @@ function firstOne() {
 
 
 <!-- -1 page -->
-<div class="flex-item"><input type="button" button title="1 side tilbage"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none;  margin-left:20px";id="oneminus"; onclick="minusOne()" value="<1"></div> 
+<div class="flex-item"><input type="button" button title="1 side tilbage"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none;  margin-left:20px";id="oneminus"; onclick="minusOne()" value="<1"></div>
 
  <script>
 function minusOne() {
@@ -168,7 +162,7 @@ function minusOne() {
 </script>
 
 <!-- -5 pages -->
-<div class="flex-item"><input type="button" button title="5 sider tilbage"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none;  margin-left:20px";id="fiveminus"; onclick="minusFive()" value="<5"></div> 
+<div class="flex-item"><input type="button" button title="5 sider tilbage"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none;  margin-left:20px";id="fiveminus"; onclick="minusFive()" value="<5"></div>
 
  <script>
 function minusFive() {
@@ -177,7 +171,7 @@ function minusFive() {
 </script>
 
 <!-- -10 pages -->
-<div class="flex-item"><input type="button" button title="10 sieder tilbage"style="width: 40px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-right:20px;  margin-left:20px";id="tenminus"; onclick="minusTen()" value="<10"></div> 
+<div class="flex-item"><input type="button" button title="10 sieder tilbage"style="width: 40px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-right:20px;  margin-left:20px";id="tenminus"; onclick="minusTen()" value="<10"></div>
 
  <script>
 function minusTen() {
@@ -190,13 +184,13 @@ function minusTen() {
 
   <div class="flex-item"><input type="text" style="width: 45px; text-align:center; color: #666666; background-color:#f6f6f6; border: 1px solid black; margin-left:20px"; id="my-page-input" value="1"></div>
 
-  <div class="flex-item"><input type="text" style="width: 45px; text-align:left; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px; margin-right:20px";id="my_text-input_2" value="af 18"></div> 
+  <div class="flex-item"><input type="text" style="width: 45px; text-align:left; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px; margin-right:20px";id="my_text-input_2" value="af 18"></div>
 
 
 
    <!-- My own buttons after -->
     <!-- +1 page -->
-<div class="flex-item"><input type="button" button title="1 side frem"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; margin-left:20px; border:none";id="oneplus"; onclick="plusOne()" value="1>"></div> 
+<div class="flex-item"><input type="button" button title="1 side frem"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; margin-left:20px; border:none";id="oneplus"; onclick="plusOne()" value="1>"></div>
 
  <script>
 function plusOne() {
@@ -206,7 +200,7 @@ function plusOne() {
 
     <!-- +5 pages -->
 
-  <div class="flex-item"><input type="button" button title="5 sider frem"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="fiveplus"; onclick="plusFive()" value="5>"></div> 
+  <div class="flex-item"><input type="button" button title="5 sider frem"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="fiveplus"; onclick="plusFive()" value="5>"></div>
 
  <script>
 function plusFive() {
@@ -215,7 +209,7 @@ function plusFive() {
 </script>
 
     <!-- +10 pages -->
-<div class="flex-item"><input type="button" button title="10 sieder frem"style="width: 40px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="tenplus"; onclick="plusTen()" value="10>"></div> 
+<div class="flex-item"><input type="button" button title="10 sieder frem"style="width: 40px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="tenplus"; onclick="plusTen()" value="10>"></div>
 
  <script>
 function plusTen() {
@@ -224,13 +218,13 @@ function plusTen() {
 </script>
 
     <!-- Last page -->
-<div class="flex-item"><input type="button" button title="Sidste side"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="onelast"; onclick="lastOne()" value=">|"></div> 
+<div class="flex-item"><input type="button" button title="Sidste side"style="width: 30px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="onelast"; onclick="lastOne()" value=">|"></div>
 
  <script>
 function lastOne() {
     document.getElementById("onelast").innerHTML = viewer.goToPage(viewer.tileSources.length - 1); // Last page;
 }
-</script>  
+</script>
 
 
  
@@ -245,8 +239,7 @@ function lastOne() {
 
 
 <!-- OSD -->
-<script src="/openseadragon/openseadragon.min.js"></script>
-<script src="/openseadragon/zoomifytilesource.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/openseadragon@2.3/build/openseadragon/openseadragon.min.js"></script>
 
 
 
@@ -257,7 +250,7 @@ function lastOne() {
 
 
         id: "openseadragon1",
-        prefixUrl: "/openseadragon/images/",
+        prefixUrl: "https://cdn.jsdelivr.net/npm/openseadragon@2.3/build/openseadragon/images/",
 	//showNavigator:  true,
 	navigatorId:   "navigatorDiv",
 
@@ -305,20 +298,20 @@ function lastOne() {
 				tilesUrl: "/Zoomify_images/Kauffmann/Bogen-Kaufmann,-21.-maj-2013.-revideret-001/"
 
 			
-			}, {			
+			}, {
 				type: "zoomifytileservice",
 				width: 1191, // change width and height according your image size
 				height: 1684,
 				tilesUrl: "/Zoomify_images/Kauffmann/Bogen-Kaufmann,-21.-maj-2013.-revideret-002/"
 
-			}, {			
+			}, {
 				type: "zoomifytileservice",
 				width: 1191, // change width and height according your image size
 				height: 1684,
 				tilesUrl: "/Zoomify_images/Kauffmann/Bogen-Kaufmann,-21.-maj-2013.-revideret-003/"
 
 
-			}, {			
+			}, {
 				type: "zoomifytileservice",
 				width: 1190, // change width and height according your image size
 				height: 1682,
@@ -395,7 +388,7 @@ function lastOne() {
 				width: 3648, // change width and height according your image size
 				height: 2736,
 				tilesUrl: "/Zoomify_images/IMG_0480/"
-			}, 
+			},
 		],
 		
 	});
@@ -419,13 +412,13 @@ function lastOne() {
       location.hash = "side" + (data.page + 1);
   if (!location.hash.replace(/^#/, '')) {
   location.hash = "side" + (viewer.currentPage() + 1);
-}    
+}
     });
 
-<!-- Aktiverer separat url (hash) -->
-    viewer.addHandler('open', function() {
-  updateForHash();
-});
+    <!-- Aktiverer separat url (hash) -->
+    viewer.addOnceHandler('open', function() {
+      updateForHash();
+    });
 
 
 
@@ -442,4 +435,3 @@ function lastOne() {
 
 </body>
 </html>
-
