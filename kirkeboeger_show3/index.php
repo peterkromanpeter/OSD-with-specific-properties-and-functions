@@ -199,23 +199,11 @@ function minusTen() {
 
    <!-- My own buttons after -->
     <!-- +1 page -->
-<div class="flex-item"><input type="button" button title="1 side frem"style="width: 30px; margin-right:3px; text-align:center; color: #f6f6f6; background-color:#666666; margin-left:20px; border:none";id="oneplus"; onclick="plusOne()" value="1>"></div>
-
- <script>
-function plusOne() {
-    document.getElementById("oneplus").innerHTML = viewer.goToPage(Math.min(viewer.tileSources.length - 1, viewer.currentPage() + 1)); // 1 pages after;
-}
-</script>
+<div class="flex-item"><input type="button" button title="1 side frem"style="width: 30px; margin-right:3px; text-align:center; color: #f6f6f6; background-color:#666666; margin-left:20px; border:none";id="oneplus"; onclick="changePage(1)" value="1>"></div>
 
     <!-- +5 pages -->
 
-  <div class="flex-item"><input type="button" button title="5 sider frem"style="width: 30px; margin-right:3px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="fiveplus"; onclick="plusFive()" value="5>"></div>
-
- <script>
-function plusFive() {
-    document.getElementById("fiveplus").innerHTML = viewer.goToPage(Math.min(viewer.tileSources.length - 1, viewer.currentPage() + 5)); // 5 pages after;
-}
-</script>
+  <div class="flex-item"><input type="button" button title="5 sider frem"style="width: 30px; margin-right:3px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="fiveplus"; onclick="changePage(5)" value="5>"></div>
 
     <!-- +10 pages -->
 <div class="flex-item"><input type="button" button title="10 sieder frem"style="width: 40px; margin-right:3px; text-align:center; color: #f6f6f6; background-color:#666666; border:none; margin-left:20px";id="tenplus"; onclick="plusTen()" value="10>"></div>
@@ -241,14 +229,18 @@ function lastOne() {
 
 
 
-<div id="openseadragon1" style="width: site-width; height:650px; border-top: 1px solid #f6f6f6;background-color:#666666";"margin: auto;></div>
+<div id="openseadragon1" style="width: site-width; height:650px; border-top: 1px solid #f6f6f6;background-color:#666666;margin: auto;"></div>
 
 
 
 
 
 <!-- OSD -->
-+<script src="https://cdn.jsdelivr.net/npm/openseadragon@2.3/build/openseadragon/openseadragon.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/openseadragon@2.3/build/openseadragon/openseadragon.min.js"></script>
 
 
 
@@ -338,7 +330,13 @@ function lastOne() {
 
 
 
-
+  function changePage(offset) {
+    var imageUrl = OpenSeadragon.getUrlParameter('img');
+    var parts = imageUrl.split('=');
+    var number = parseInt(parts[1], 10);
+    number += offset;
+    location.href = '?img=' + parts[0] + '=' + number;
+  }
 
 
 
